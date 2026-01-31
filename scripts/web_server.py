@@ -13,7 +13,7 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         if self.path.startswith("/api/"):
-            target = "http://127.0.0.1:6900" + self.path.replace("/api", "")
+            target = "http://127.0.0.1:6900" + self.path
             resp = requests.get(target, timeout=20)
             self.send_response(resp.status_code)
             self.send_header("Content-Type", resp.headers.get("Content-Type", "application/json"))
