@@ -20,8 +20,6 @@ py -3.12 -m venv .venv
 [Environment]::SetEnvironmentVariable("FMP_API_KEY","<你的key>","User")
 ```
 
-> 注：OpenBB API 的 provider key 需配置到 OpenBB 设置里（见 OpenBB 文档）。
-
 4) 启动 OpenBB API（如未启动）
 ```bash
 C:\Users\ralph\IdeaProject\OpenBB\.venv\Scripts\openbb-api.exe
@@ -31,6 +29,8 @@ C:\Users\ralph\IdeaProject\OpenBB\.venv\Scripts\openbb-api.exe
 ```bash
 .\.venv\Scripts\python.exe scripts\crypto_demo_api.py
 ```
+
+> 说明：脚本中 **历史价格** 使用 OpenBB API（yfinance），**搜索** 使用 FMP 直连（读取 FMP_API_KEY）。如遇 403，通常是 Key 权限/额度问题。
 
 ## 项目结构
 
