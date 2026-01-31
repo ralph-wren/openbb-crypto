@@ -30,6 +30,11 @@ C:\Users\ralph\IdeaProject\OpenBB\.venv\Scripts\openbb-api.exe
 .\.venv\Scripts\python.exe scripts\crypto_demo_api.py
 ```
 
+6) 运行指标示例（MA/RSI）
+```bash
+.\.venv\Scripts\python.exe scripts\crypto_indicators.py
+```
+
 > 说明：脚本中 **历史价格** 使用 OpenBB API（yfinance），**搜索** 使用 FMP 直连（读取 FMP_API_KEY）。如遇 403，通常是 Key 权限/额度问题。
 
 ## 项目结构
